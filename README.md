@@ -39,6 +39,10 @@ int main() {
   }
 ```
 for more information see the [example](https://github.com/onbitSyn/shamir_secret_share/blob/master/example.cpp)
+to compile code
+```bash
+g++ example.cpp ./src/shamir.o ./src/GF\(256\).o -o example
+```
 
 ## Implementation Details
 Shamir's Secret Share Algorithm only works for the finite field, and this library performs all operations in [GF(256)](http://www.cs.utsa.edu/~wagner/laws/FFM.html).Each byte
