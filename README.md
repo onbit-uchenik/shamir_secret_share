@@ -1,7 +1,7 @@
 # shamir_secret_share
 C++ implementation of [Shamir Secret Scheme](https://medium.com/@apogiatzis/shamirs-secret-sharing-a-numeric-example-walkthrough-a59b288c34c4) over GF(256)
 
-##Using Shamir Secret Share Library
+#Using Shamir Secret Share Library
  
  ```bash
   git clone https://github.com/onbitSyn/shamir_secret_share.git
@@ -41,11 +41,11 @@ int main() {
 ```
 for more information see the [example](https://github.com/onbitSyn/shamir_secret_share/blob/master/example.cpp)
 
-##Implementation Details
+#Implementation Details
 Shamir's Secret Share Algorithm only works for the finite field, and this library performs all operations in [GF(256)](http://www.cs.utsa.edu/~wagner/laws/FFM.html).Each byte
 of the secret is encoded as separate byte.
 For reconstruction of the secret, Lagrange interpolation is used.
 
-##License
+#License
 Copyright © 2020 Anubhav Vats
 Distributed under the Apache License 2.0
