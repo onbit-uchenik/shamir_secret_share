@@ -43,6 +43,21 @@ to compile code
 ```bash
 g++ example.cpp ./src/shamir.o ./src/GF\(256\).o -o example
 ```
+## How Shamir's Algorithm works
+Consider a example in which a father wants to secretly divide his [Will](https://www.investopedia.com/articles/pf/08/what-is-a-will.asp) among 4 children and wants when 3 or more than 3 children wants to read it, then only it can be accessible.
+Now, father uses shamir's algorithm to secretly divide the will into 4 pieces. 
+Shamir algorithm make a random polynomial :-
+```math
+p(x) = a*x^2 + b*x + c
+p(0) = c (represent will in integer)
+p(1) = a+b+c
+p(2) = 4*a + 2*b + c
+p(3) = 9*a + 3*b + c
+```
+share of children 1 :- {1,p(1)}
+share of children 2 :- {,p(2)}
+share of children 3 :- {3,p(3)}
+share of children 4 :- {4,p(4)}
 
 ## Implementation Details
 Shamir's Secret Share Algorithm only works for the finite field, and this library performs all operations in [GF(256)](http://www.cs.utsa.edu/~wagner/laws/FFM.html).Each byte
