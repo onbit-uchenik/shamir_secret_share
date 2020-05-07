@@ -54,10 +54,10 @@ p(1) = a+b+c
 p(2) = 4*a + 2*b + c
 p(3) = 9*a + 3*b + c
 ```
-share of children 1 :- {1,p(1)}
-share of children 2 :- {,p(2)}
-share of children 3 :- {3,p(3)}
-share of children 4 :- {4,p(4)}
+share of children 1 :- {1,p(1)}<br />
+share of children 2 :- {2,p(2)}<br />
+share of children 3 :- {3,p(3)}<br />
+share of children 4 :- {4,p(4)}<br />
 
 ## Implementation Details
 Shamir's Secret Share Algorithm only works for the finite field, and this library performs all operations in [GF(256)](http://www.cs.utsa.edu/~wagner/laws/FFM.html).Each byte
