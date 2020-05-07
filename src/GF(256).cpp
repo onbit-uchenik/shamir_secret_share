@@ -70,7 +70,7 @@ byte byte::operator/(byte b) {
     return (*this) * c;
 }
 
-byte byte::slowMul(byte& a,byte& b) {
+byte slowMul(byte& a,byte& b) {
     unsigned int aa = a.num, bb = b.num, r=0, t;
     while(aa != 0) {
       if((aa & 1) != 0) {
@@ -121,7 +121,7 @@ void gen_multipletable() {
   byte generator = 3;
   exponents[0] = 1;;
   for(int i=1;i<256;i++) {
-      exponents[i] = generator.slowMul(generator,exponents[i-1]);
+      exponents[i] = slowMul(generator,exponents[i-1]);
   }
   for(int i=0;i<256;i++) {
       logs[exponents[i].num] = i;

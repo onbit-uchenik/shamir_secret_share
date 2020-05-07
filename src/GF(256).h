@@ -17,9 +17,9 @@ namespace GF256 {
      byte operator~();
      byte operator/(byte b);
 
-     byte slowMul(byte& a,byte& b);
      void print();
    };
+
 
    typedef struct point{
        byte x;
@@ -27,6 +27,7 @@ namespace GF256 {
    }point;
 
 };
+GF256::byte slowMul(GF256::byte& a,GF256::byte& b);
 
 std::ostream& operator<<(std::ostream& out, GF256::byte b);
 
