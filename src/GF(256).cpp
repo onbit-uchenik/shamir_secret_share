@@ -103,7 +103,7 @@ bool operator<(const byte& lhs,const byte& rhs) {
   return lhs.num < rhs.num;
 }
 
-/*Recursive power function to calculate (a^b) % p
+/*Recursive power function to calculate (a^b)
  *return: (a^b) in GF(256 )
  *argument: a and b */
 byte power(byte a,int b) {
