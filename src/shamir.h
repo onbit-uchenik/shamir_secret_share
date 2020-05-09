@@ -1,3 +1,5 @@
+//https://crypto.stackexchange.com/questions/10701/shamirs-secret-share-over-the-reals
+
 #ifndef SHAMIR
 #define SHAMIR
 

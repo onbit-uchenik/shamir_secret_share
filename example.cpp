@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
+#include <random>
 #include "./src/GF(256).h"
 #include "./src/shamir.h"
 

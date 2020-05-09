@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
+#include <random>
 #include "GF(256).h"
 #include "shamir.h"
 
@@ -19,12 +18,15 @@ scheme::scheme(int members,int threshold){
 /*Creating of shares shamir (n,k) scheme*/
 
 shares* scheme::createShares(string secret) {
+  random_device device;
+  default_random_engine generator;
+  uniform_int_distribution<int> distribution(0,255);
   shares* allShares = new shares(n);
   for(char data:secret) {
   byte coeff[k];
   coeff[0] = (int)data;
     for(int i=1;i<k;i++) {
-        coeff[i] = (int)(rand() % 256);
+        coeff[i] = distribution(generator);
     }
     point temp;
     byte x,y;
@@ -62,5 +64,4 @@ string scheme::getSecret(shares* Kshares) {
 
 void shamir::init() {
   gen_multipletable();
-  srand((unsigned int) time(NULL));
 }
