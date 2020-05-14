@@ -19,7 +19,7 @@ scheme::scheme(int members,int threshold){
 
 shares* scheme::createShares(string secret) {
   random_device device;
-  default_random_engine generator;
+  default_random_engine generator(device());
   uniform_int_distribution<int> distribution(0,255);
   shares* allShares = new shares(n);
   for(char data:secret) {
