@@ -33,8 +33,8 @@ shares* scheme::createShares(string secret) {
     for(int i=0;i<n;i++) {
         x = (int)(i + 1);
         y = 0;
-        for(int i=0;i<k;i++) {
-            y = y + (coeff[i] * power(x,i));
+        for(int j=0;j<k;j++) {
+            y = y + (coeff[j] * power(x,j));
         }
         temp.x = x;
         temp.y = y;
