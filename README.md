@@ -67,3 +67,6 @@ For reconstruction of the secret, Lagrange interpolation is used.
 ## License
 Copyright © 2020 Anubhav Vats
 Distributed under the Apache License 2.0
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/onbit-uchenik/shamir_secret_share.svg?variant=adaptive)](https://starchart.cc/onbit-uchenik/shamir_secret_share)
