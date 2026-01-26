@@ -65,7 +65,7 @@ of the secret is encoded as separate byte.
 For reconstruction of the secret, Lagrange interpolation is used.
 
 ## License
-Copyright © 2020 Anubhav Vats
+Copyright © 2026 Anubhav Vats
 Distributed under the Apache License 2.0
 
 ## Stargazers over time
